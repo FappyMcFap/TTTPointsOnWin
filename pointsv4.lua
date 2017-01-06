@@ -10,6 +10,7 @@ local function TTTWinRoundPoints(result)
 					ply:PS_GivePoints( 15 )
 					ply:ChatPrint("Unfortunately, you're dead. You do however get 15 points since your Innocent team has won!")
 				end
+			elseif ply:GetRole() == TEAM_SPEC then return
 			end
 		end
 	elseif result == WIN_TRAITOR then
@@ -22,6 +23,7 @@ local function TTTWinRoundPoints(result)
 					ply:PS_GivePoints( 20 ) 	
 					ply:ChatPrint("Unfortunately, you're dead. You do however get 20 points since your Traitor team has won!")
 				end
+			elseif ply:GetRole() == TEAM_SPEC then return
 			end
 		end
 	elseif result == WIN_TIMELIMIT then 
@@ -34,6 +36,7 @@ local function TTTWinRoundPoints(result)
 					ply:PS_GivePoints( 25 )
 					ply:ChatPrint("You're dead and you had to wait for the Traitors to do their jobs, here's 25 points for your troubles!")
 				end
+			elseif ply:GetRole() == TEAM_SPEC then return
 			end
 		end
 	end
