@@ -18,7 +18,7 @@ local function TTTWinRoundPoints(result)
 			if ply:GetRole() == ROLE_TRAITOR then
 				if ply:Alive() then
 					ply:PS_GivePoints( 70 )
-					ply:ChatPrint("You've been given 70 points for winning and surviving the round a Traitor!")
+					ply:ChatPrint("You've been given 70 points for winning and surviving the round as a Traitor!")
 				elseif not ply:Alive() then
 					ply:PS_GivePoints( 20 ) 	
 					ply:ChatPrint("Unfortunately, you're dead. You do however get 20 points since your Traitor team has won!")
